@@ -1,0 +1,48 @@
+
+{% block body %}
+{{ form_start(form) }}
+      {# {{ form_widget(form) }} #}
+    <div class="form_group" align="left">
+        <div class="col-md-6 mb-1" >
+            {{ form_row(form.email, {'attr': {'class': 'form-control '}}) }}
+
+        </div>
+
+
+         <div class="col-md-6 mb-1" >
+            {{ form_row(form.password.first, {'attr': {'class':
+                'form-control'}}) }}
+        </div>
+
+            <div class="col-md-6 mb-1" >
+                {{ form_row(form.password.second, {'attr': {'class':
+                    'form-control'}}) }}
+            </div>
+
+        <div class="col-md-6 mb-1" >
+            {{ form_row(form.phonenumber, {'attr': {'class': 'form-control'}}) }}
+        </div>
+
+
+
+        <div class="col-md-6 mb-1" >
+            {{ form_row(form.adress, {'attr': {'class': 'form-control'}}) }}
+        </div>
+
+
+
+
+        <div class="col-md-6 mb-1" >
+            {{ form_row(form.roles, {'attr': {'class': 'form-control'}}) }}
+        </div>
+
+
+     <button class="btn">{{ button_label|default('Save') }}</button>
+
+    </div>
+    {{ form_end(form) }}
+
+
+
+
+{% endblock %}
